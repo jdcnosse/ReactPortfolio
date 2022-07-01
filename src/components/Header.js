@@ -7,7 +7,7 @@ const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
-        <Navbar dark color='dark' expand='md' fixed='top'>
+        <Navbar dark color='dark' expand='md'>
             <NavbarToggler onClick={() => setMenuOpen(!menuOpen)}/>
             <Collapse isOpen={menuOpen} navbar>
                 <Nav className='mx-auto' navbar>

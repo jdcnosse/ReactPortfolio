@@ -1,5 +1,14 @@
+import { Container, Row } from 'reactstrap';
+import SubHeader from "../components/SubHeader";
+
 const AboutPage = () => {
-    return <div>AboutPage</div>;
+    return (
+        <Container>
+            <Row>
+                <SubHeader current='About Us' />
+            </Row>
+        </Container>
+    );
 };
 
 export default AboutPage;
