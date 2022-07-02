@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Navbar, NavbarToggler, Nav, NavItem, Collapse } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Navigation = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -37,4 +37,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default Navigation;
