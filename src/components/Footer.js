@@ -39,11 +39,11 @@ const Footer = () => {
                         </a>
                     </Col>
                     <Col sm='4' className='text-center'>
-                        <a role='button' className='btn btn-link' href='tel:+12345678900'>
+                        <a role='button' className='btn btn-link text-dark' href='tel:+12345678900'>
                             <i className='fa fa-phone' /> 1-234-567-8900
                         </a>
                         <br />
-                        <a role='button' className='btn btn-link' href='mailto:notreal@notreal.co'>
+                        <a role='button' className='btn btn-link text-dark' href='mailto:notreal@notreal.co'>
                             <i className='fa fa-envelope-o' /> contact@phynixcomics.notreal
                         </a>
                     </Col>

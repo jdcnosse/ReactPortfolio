@@ -38,7 +38,7 @@
   }
 }
 
-.jumbotron {
+.bgHeader {
   font-family: 'Macondo', cursive;
   background-image: linear-gradient(to bottom right, #a6232b, #ffc72f);
   text-shadow: 2px 2px;

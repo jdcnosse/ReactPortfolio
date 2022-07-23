@@ -5,6 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: grey;
+}
+
+footer a {
+  color: black;
+}
+
+footer a:hover {
+  color: white;
+}
+
+footer a:active {
+  color: lightgray;
+}
+
+footer a:visited {
+  color: whitesmoke;
 }
 
 code {

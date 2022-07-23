@@ -3,13 +3,15 @@ import phxLogoShadow from '../app/assets/img/phxLogoShadow.png';
 
 const Header = () => {
     return (
-            <Container>
+            <Container className='container-fluid bgHeader'>
                 <Row>
-                    <Col xs='4' sm='3' md='2' className='align-self-center'>
-                        <img src={phxLogoShadow} className='img-fluid' alt='Company Logo' />
+                    <Col className='align-self-center'>
+                        <img src={phxLogoShadow} alt='Company Logo' />
                     </Col>
-                    <Col className='text-center align self-center'>
+                    <Col className='text-center align-self-center'>
                         <h1>Welcome to Phynix Comics!</h1>
+                    </Col>
+                    <Col>
                     </Col>
                 </Row>
             </Container>
