@@ -5,7 +5,7 @@ const SubHeader = ({current}) => {
     return (
         <Container>
             <Row>
-                <Col className='bg-white rounded' xs='2'>
+                <Col className='bg-white rounded' xs='12'>
                 <Breadcrumb>
                     <BreadcrumbItem>
                         <Link to='/'>Home</Link>
