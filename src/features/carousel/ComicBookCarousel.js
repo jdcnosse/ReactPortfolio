@@ -1,8 +1,14 @@
 import { useState } from 'react';
-import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from 'reactstrap';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
+} from 'reactstrap';
 import avengers from '../../app/assets/img/avengers.jpg';
 import justiceLeague from '../../app/assets/img/justice-league.jpg';
-import spawn from '../../app/assets/img/spawn.jpg'; 
+import spawn from '../../app/assets/img/spawn.jpg';
 import strayDogs from '../../app/assets/img/stray-dogs.jpg';
 
 const comics = [
@@ -10,26 +16,26 @@ const comics = [
     src: avengers,
     altText: 'Avengers #1 Cover',
     caption: 'Avengers #1',
-    key: 1
+    key: 0,
   },
   {
     src: justiceLeague,
     altText: 'Justice League Infinity #1 Cover',
-    caption: 'Justice League Infinity #1',
-    key: 2
+    // caption: 'Justice League Infinity #1',
+    key: 1,
   },
   {
     src: spawn,
     altText: 'Spawn #1 Cover',
-    caption: 'Spawn #1',
-    key: 3
+    // caption: 'Spawn #1',
+    key: 2,
   },
   {
     src: strayDogs,
     altText: 'Stray Dogs #1 Cover',
-    caption: 'Stray Dogs #1',
-    key: 4
-  }
+    // caption: 'Stray Dogs #1',
+    key: 3,
+  },
 ];
 
 const ComicBookCarousel = (args) => {
@@ -40,18 +46,18 @@ const ComicBookCarousel = (args) => {
     if (animating) return;
     const nextIndex = activeIndex === comics.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const previous = () => {
     if (animating) return;
     const nextIndex = activeIndex === 0 ? comics.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
-  }
+  };
 
   const goToIndex = (newIndex) => {
     if (animating) return;
     setActiveIndex(newIndex);
-  }
+  };
 
   const slides = comics.map((item) => {
     return (
@@ -61,24 +67,39 @@ const ComicBookCarousel = (args) => {
         key={item.src}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+        <CarouselCaption
+          captionText={item.caption}
+          captionHeader={item.caption}
+        />
       </CarouselItem>
     );
   });
 
-   return (
-     <Carousel
-       activeIndex={activeIndex}
-       next={next}
-       previous={previous}
-       {...args}
-     >
-       <CarouselIndicators items={comics} activeIndex={activeIndex} onClickHandler={goToIndex} />
-       {slides}
-       <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-       <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-     </Carousel>
-   );
-}
+  return (
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+      {...args}
+    >
+      <CarouselIndicators
+        items={comics}
+        activeIndex={activeIndex}
+        onClickHandler={goToIndex}
+      />
+      {slides}
+      <CarouselControl
+        direction='prev'
+        directionText='Previous'
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction='next'
+        directionText='Next'
+        onClickHandler={next}
+      />
+    </Carousel>
+  );
+};
 
 export default ComicBookCarousel;
