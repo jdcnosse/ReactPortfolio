@@ -15,7 +15,7 @@ const comics = [
   {
     src: avengers,
     altText: 'Avengers #1 Cover',
-    caption: 'Avengers #1',
+    // caption: 'Avengers #1',
     key: 0,
   },
   {
@@ -64,13 +64,10 @@ const ComicBookCarousel = (args) => {
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
-        key={item.src}
+        key={item.key}
       >
         <img src={item.src} alt={item.altText} />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
-        />
+        <CarouselCaption captionHeader={item.caption} />
       </CarouselItem>
     );
   });
